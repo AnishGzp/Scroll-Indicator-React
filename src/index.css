@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loading-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & .loading {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    & i {
+      animation: gear 1s linear infinite;
+    }
+  }
+}
+
+@keyframes gear {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+  & h2 {
+    margin: 10px 0 0 0;
+  }
+  & .scroll-progress-tracking-container {
+    background-color: yellow;
+    height: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    & div {
+      height: 100%;
+      background-color: red;
+    }
+  }
+  & .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    & .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      box-shadow: 0px 0px 5px #555;
+    }
+  }
+}
